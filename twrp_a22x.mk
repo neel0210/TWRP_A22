@@ -5,15 +5,18 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+PRODUCT_RELEASE_NAME := a22x
 
-# Inherit some common Omni stuff.
+# Inherit from those products. Most specific first.
+# Inherit some common TWRP stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 # Inherit from a22x device
 $(call inherit-product, device/samsung/a22x/device.mk)
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery/root,recovery/root)
 
 PRODUCT_DEVICE := a22x
 PRODUCT_NAME := twrp_a22x
