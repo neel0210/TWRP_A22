@@ -5,6 +5,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+TARGET_OTA_ASSERT_DEVICE := a22x
+
 DEVICE_PATH := device/samsung/a22x
 
 # For building with minimal manifest
