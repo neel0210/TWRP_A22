@@ -4,7 +4,4 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-
-add_lunch_combo omni_a22x-user
-add_lunch_combo omni_a22x-userdebug
-add_lunch_combo omni_a22x-eng
+git clone --depth=1 https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-6443078 prebuilts/clang/host/linux-x86/clang-r383902
