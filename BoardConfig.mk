@@ -170,3 +170,8 @@ TW_CUSTOM_BATTERY_POS := "790"
 
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
+
+# Fastboot
+TW_INCLUDE_FASTBOOTD := true
+
+
