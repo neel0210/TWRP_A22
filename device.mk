@@ -47,9 +47,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     create_pl_dev \
     create_pl_dev.recovery
-    
-# libmtk_bsg
-PRODUCT_PACKAGES += libmtk_bsg
 
 # fastbootd
 PRODUCT_PACKAGES += \
