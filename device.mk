@@ -31,7 +31,14 @@ PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh
 
-# Boot control HAL
+# Bootctrl
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-mtkimpl \
+    android.hardware.boot@1.2-mtkimpl.recovery
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctrl
+
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
     android.hardware.boot@1.2-impl.recovery \
