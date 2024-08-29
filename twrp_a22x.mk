@@ -18,7 +18,7 @@ $(call inherit-product, device/samsung/a22x/device.mk)
 PRODUCT_DEVICE := a22x
 PRODUCT_NAME := twrp_a22x
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-A226B
+PRODUCT_MODEL := Samsung Galaxy A22 5G
 PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
