@@ -7,10 +7,22 @@
 /nvcfg        emmc     /dev/block/platform/bootdevice/by-name/nvcfg     flags=display="NVCFG";backup=1;subpartitionof=/nvram;
 /nvdata       emmc     /dev/block/platform/bootdevice/by-name/nvdata    flags=display="NVDATA";backup=1;subpartitionof=/nvram;
 
+# Prism and Optics
 /optics       ext4     /dev/block/platform/bootdevice/by-name/optics    flags=backup=1;flashimg;display="Optics";
 /prism        ext4     /dev/block/platform/bootdevice/by-name/prism     flags=backup=1;flashimg;display="Prism";
 
 /recovery     emmc     /dev/block/platform/bootdevice/by-name/recovery  flags=backup=1;display="Recovery";flashimg;
 
-# Removable storage
-/external_sd  auto     /dev/block/mmcblk1p1	/dev/block/mmcblk1          flags=storage;wipeingui;removable;display="External SDcard"
+/system_image		emmc	/dev/block/mapper/system		flags=backup=0;flashimg;display="System Image"
+/vendor_image		emmc	/dev/block/mapper/vendor		flags=backup=0;flashimg;display="Vendor Image"
+/product_image		emmc	/dev/block/mapper/product		flags=backup=0;flashimg;display="Product Image"
+/odm_image		emmc	/dev/block/mapper/odm		flags=backup=0;flashimg;display="Odm Image"
+/system_ext_image	emmc	/dev/block/mapper/system_ext	flags=backup=0;flashimg;display="System_EXT Image"
+/vendor_dlkm_image	emmc	/dev/block/mapper/vendor_dlkm	flags=backup=0;flashimg;display="Vendor_DLKM Image"
+
+## Internal storage (for OrangeFox)
+/storage            f2fs      /data/media/0                                                         flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable;
+
+# SD Card & USB-OTG Points
+/external_sd     auto       /dev/block/mmcblk1p1    /dev/block/mmcblk1            flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg         auto       /dev/block/sda1         /dev/block/sda                flags=display="USB OTG";storage;wipeingui;removable
